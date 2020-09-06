@@ -1,0 +1,107 @@
+body {
+  background: rgb(204,204,204); 
+}
+page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+}
+page[size="A4"] {  
+  width: 21cm;
+  height: 29.7cm; 
+}
+@media print {
+  body, page {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
+.logo{
+  height: 120px;
+  widows: 120px;
+}
+.logoline{
+  padding-top: 30px;
+  padding-left: 40px;
+}
+.fontsmall{
+  font-size: 10px;
+}
+.mp-0{
+  margin-left: 2%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  padding: 0%;
+}
+.padding-ticks{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.header-align{
+  align-self: end;
+}
+.input-border{
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+}
+.border-box{
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  width: 690px;
+}
+.border-box-bottom{
+  border-bottom: 1px solid black;
+}
+.header {
+  display: grid;
+  grid-template-columns: 140px 275px 275px;
+  /* grid-template-columns: 230px 230px 230px; */
+  /* grid-template-columns: 230px 230px 230px; 690 */
+}
+.fr-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 690px;
+}
+.fr-ticks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.fr-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 690px;
+}
+.borderthick{
+  /* border-radius: 1px; */
+  border-color: darkblue;
+  border-style: solid;
+}
+.input-span{
+  display: block;
+  overflow: hidden;
+}
+.input-label{
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.input-100{
+  width: 100%;
+}
+.py-1{
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.tab{
+  padding-left: 20%;
+}
+.bold{
+  font-weight: bold;
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+}

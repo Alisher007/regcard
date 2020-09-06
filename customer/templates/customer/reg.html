@@ -1,0 +1,334 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  #signature-wrapper {
+  visibility: hidden;
+  /* margin: 100px 50px 100px 100px; */
+  margin: auto;
+  width:400px;
+  height:250px;
+  -webkit-box-shadow: 0 0 0.5cm rgba(0,0,0,0.5); 
+  box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.signature-pad {
+  left: 0;
+  top: 0;
+  width:400px;
+  height:200px;
+  background-color: white;
+}
+
+</style>
+<script src="{% static 'js/sig_pad.js' %}" type="text/javascript"></script>
+<div>
+<page size="A4" id="page">
+    <div class="logoline">
+      
+    
+    <div class="header" >
+      <div class=""> <img class="logo" src=" {% static 'img/JA_JAM-E-01_small.JPEG' %}" alt=""> </div>
+      <div class=" header-align" > 
+        <p class="fontsmall mp-0">Manafaru</p> 					
+        <p class="fontsmall mp-0">PO Box 2062, Haa Alifu Atoll, Republic of Maldives	</p>	
+        <p class="fontsmall mp-0">jaresortshotels.com</p>
+        <p class="fontsmall mp-0">Guest Registration Form</p>
+      </div>
+      <div class=" header-align">
+        <p class="input-border fontsmall" style="padding-left: 2%; margin-bottom: 0%;">JA Discovery  &nbsp; &nbsp; &nbsp;  <span class="tab"></span> Tier</p>
+      </div>
+    </div>
+    <!-- header -->
+    <div class="py-1"></div>
+    <!-- detail -->
+    <div class="border-box" >
+      <div class="fr-2 " >
+        <div class=""> 
+          <label class="input-label bold">Surname</label>
+          <span class="input-span"><input type="text" class="input-border input-100" style="line-height: 12px;"></span>
+        </div>
+        <div class="">
+          <label class="input-label bold">Firstname</label>
+          <span class="input-span"><input type="text" class="input-border input-100" style="line-height: 12px;"></span>
+        </div>
+      </div>
+      <!-- fr-2-->
+      <div class="fr-1" >
+        <div class="" > 
+          <label class="input-label bold">Address</label>
+          <span class="input-span"><input type="text" class="input-border input-100" style="line-height: 12px;"></span>
+        </div>
+      </div>
+      <!-- fr-1-->
+      <div class="fr-1" >
+        <div class="" > 
+          <span class="input-span"><input type="text" class="input-border input-100" style="line-height: 12px;"></span>
+        </div>
+      </div>
+      <!-- fr-1-->
+      <div class="fr-2" >
+        <div class=""> 
+          <label class="input-label bold">Zip/Post Code</label>
+          <span class="input-span"><input type="text" class="input-border input-100" style="line-height: 12px;"></span>
+        </div>
+        <div class="">
+          <label class="input-label bold">State</label>
+          <span class="input-span"><input type="text" class="input-border input-100" style="line-height: 12px;"></span>
+        </div>
+      </div>
+      <!-- fr-2-->
+      <div class="fr-2" >
+        <div class=""> 
+          <label class="input-label bold">City</label>
+          <span class="input-span"><input type="text" class="input-border input-100" style="line-height: 12px;"></span>
+        </div>
+        <div class="">
+          <label class="input-label bold">Country</label>
+          <span class="input-span"><input type="text" class="input-border input-100" style="line-height: 12px;"></span>
+        </div>
+      </div>
+      <!-- fr-2-->
+      <div class="fr-2" >
+        <div class=""> 
+          <label class="input-label bold">Telephone</label>
+          <span class="input-span"><input type="text" class="input-border input-100" style="line-height: 12px;"></span>
+        </div>
+        <div class="">
+          <label class="input-label bold">Email</label>
+          <span class="input-span"><input type="text" class="input-border input-100" style="line-height: 12px;"></span>
+        </div>
+      </div>
+      <!-- fr-2-->
+    </div>
+    <!-- detail -->
+    <div class="fr-1">
+        <p class="fontsmall" style="justify-self: center; font-style: italic; margin-bottom: 0%; background-color:rgb(226, 226, 226);">Our Privacy Policy is available at www.jaresortshotels.com and can be printed on Request. It explains how your data is used and your rights.</p>
+    </div>
+    <p style="background-color: black; color: white; width: 120px; margin-bottom: 0%; margin-top: 0%;">You Stay with Us</p>
+    <!-- flight_details -->
+    <div class="border-box">
+      <div class="fr-2 border-box-bottom" >
+        <div class=""> 
+          <label class="input-label bold" style="margin-bottom: 1px;">Arrival</label>
+        </div>
+        <div class="">
+          <label class="input-label bold" style="margin-bottom: 1px;">Room &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Adults &nbsp; &nbsp; &nbsp; &nbsp;  Children</label>
+        </div>
+      </div>
+      <div class="fr-2 border-box-bottom" >
+        <div class=""> 
+          <label class="input-label bold" style="margin-bottom: 1px;">Departure</label>
+        </div>
+        <div class="">
+          <label class="input-label bold" style="margin-bottom: 1px;">Room Type</label>
+        </div>
+      </div>
+      <!-- fr-2-->
+      <div class="fr-2 border-box-bottom" >
+        <div class=""> 
+          <label class="input-label bold" style="margin-bottom: 1px;">Reservation number</label>
+        </div>
+        <div class="">
+          <label class="input-label bold" style="margin-bottom: 1px;">Rate</label>
+        </div>
+      </div>
+      <!-- fr-2-->
+      <div class="fr-2" >
+        <div class=""> 
+          <label class="input-label bold" style="margin-bottom: 1px;">Local Newspaper &nbsp; &nbsp;<input type="checkbox" > Yes <input type="checkbox"> No</label>
+        </div>
+        <div class="">
+          <label class="input-label bold" style="margin-bottom: 1px;">Payment Method</label>
+        </div>
+      </div>
+      <!-- fr-2-->
+    </div>
+    <!-- flight_details -->
+    
+    <div class="fr-1">
+      <div class="border-box" > 
+        <ul style="padding-left: 15px; padding-bottom: 0; margin-bottom: 0;" >
+          <li class="fontsmall" >
+            Prices are subject to 10% Service Charge and 12% Government Tax, as well as an additional charge of USD 6 (Six US Dollars) per guest, per night as green tax.
+          </li>
+          <li class="fontsmall">
+            You agree that you are personally liable to pay all the fees and charges incurred by you and your party during your stay.
+          </li>
+          <li class="fontsmall">
+            Your account must be settled in full by paying cash, or the use of your debit or credit card.
+          </li>
+          <li class="fontsmall">
+            You also agree to authorise the Hotel to debit the deposit from your nominated card; or to give the required deposit amount in cash.
+          </li>
+          <li class="fontsmall">
+            The Hotel does not accept responsibility for loss of money, jewellery or other valuables. A safety deposit box is available in your room.
+          </li>
+          <li class="fontsmall">
+            Check-out is 12:00PM. After 12:00PM until 06:00PM, 50% of the room rate will be charged. Late checkout is subject to availability.
+          </li>
+          <li class="fontsmall">
+            When using the Hotel facilities - such as the beach, pool, fitness and other activities - you use it at your own risk and accept any responsibilities that may arise from you and the rest of your party members. * Please be informed that ALL rooms are STRICTLY NON-SMOKING. Rooms with smoking smell will result in charges of USD 200 (Two hundred US Dollars) for deep cleaning the room after your departure
+          </li>
+          <li class="fontsmall">
+            Maximum occupancy of the room cannot be exceeded.
+          </li>
+          <li class="fontsmall">As per Maldivian Law, all visitors to guest room have to be registered at the reception with a valid passport or valid ID; black and white copies of IDs are not accepted.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fr-1">
+      <div class="border-box" style="padding-left: 5px; background-color:rgb(208, 224, 240);" > 
+        <p class="fontsmall">
+          We’d love to stay in touch and share details of our special offers, products, services, update and resort information from time to time. 
+        </p>
+        <p class="fontsmall">
+          We’d also like to extend to you the opportunity to join our loyalty program, Discovery, operated by Global Hotel Alliance, GHA Loyalty DMCC. Signing up today, take advantage of the benefits and start earning rewards with DISCOVERY every time you stay with us, with a network of more than 550 other hotels worldwide
+        </p>
+        <p class="fontsmall">
+          We'd also like to invite you to join our loyalty program, I Prefer, operated by Preferred Hotels & Resorts. Being an I Prefer member, you can earn points to go towards Reward Certificates which have cash-value and can be used towards future stays, or spa services. The program has over 650+ participating I Preferred Hotels within Preferred Hotels & Resorts
+        </p>
+        <p class="fontsmall" style="margin-bottom: 0;">
+          You can be among the first to find out about our latest news and events at JA Resorts & Hotels, as well as at DISCOVERY and I Prefer. 
+        </p>
+        <div class="fr-ticks "  >
+          <div class=" "> 
+            <label class="fontsmall padding-ticks" style="color: red;"><input type="checkbox" >  Yes sign me up to JA Resorts & Hotel news!</label>
+          </div>
+          <div class="">
+            <label class="fontsmall padding-ticks" ><input type="checkbox" >  Not at this time</label>
+          </div>
+        </div>
+        <!-- fr-ticks-->
+        <div class="fr-ticks" >
+          <div class=""> 
+            <label class="fontsmall padding-ticks" style="color: red;"><input type="checkbox" >  Yes sign me up to DISCOVERY loyalty!</label>
+          </div>
+          <div class="">
+            <label class="fontsmall padding-ticks" ><input type="checkbox" >  Not at this time</label>
+          </div>
+        </div>
+        <!-- fr-ticks-->
+        <div class="fr-ticks" >
+          <div class=""> 
+            <label class="fontsmall padding-ticks" style="color: red;"><input type="checkbox" >  Yes sign me up to I Prefer loyalty!</label>
+          </div>
+          <div class="">
+            <label class="fontsmall padding-ticks" ><input type="checkbox" >  Not at this time</label>
+          </div>
+        </div>
+        <!-- fr-ticks-->
+      </div>
+      <div class="fr-1" >
+        <div class="border-box" style="background-color:rgb(208, 224, 240);"> 
+          <p class="fontsmall" style="padding-left: 5px; margin-bottom: 2px;">
+            We will issue a post-stay guest questionnaire to measure guest satisfaction on our product, service and quality assurance standards 
+          </p>
+        </div>
+      </div>
+      <!-- fr-1-->
+      <div class="fr-1" >
+        <div class="border-box" > 
+          <label class="input-label bold" style="margin-top: 10px;" >Signature</label>
+          <label class="input-label bold" style="margin-top: 14px; margin-bottom: 0;">__________________________________________ </label><button id="signature-trigger">eSign</button>
+        </div>
+      </div>
+      <!-- fr-1-->
+      <div class="fr-1" >
+        <div class="border-box" > 
+          <label class="input-label bold">Checked in by: <span style="padding-left: 90px; padding-right: 90px;"></span> 
+            Verified by: <span style="padding-left: 90px; padding-right: 90px;"></span> Date:</label>
+        </div>
+      </div>
+      <!-- fr-1-->
+      <div class="fr-1">
+        <p class="fontsmall" style="justify-self: center; font-style: italic; margin-bottom: 0%; text-align: center">References to Hotel, Us, Our, We means JA Resorts & Hotels LLC, its parent, subsidiary, branches and sister companies (including JA The Resort, Hatta Fort Hotel and JARH Maldives Pvt Ltd) and their respective owners, operators, officers, managers and employees.</p>
+        </div>
+    </div>
+  </div>
+  <!-- logoline -->
+
+</div>
+<div id="signature-wrapper" >
+  <canvas id="signature-pad" class="signature-pad" width=400 height=200 style="border-style: solid; border-color: black;"></canvas>
+  <div>
+  <button id="save-png">Save</button>
+  <button id="undo">Undo</button>
+  <button id="clear">Clear</button>
+  <button id="close">Cancel</button>
+  </div>
+</div>
+</page>
+
+
+</div>
+  <script>
+var page = document.getElementById("page");
+var sig = document.getElementById("signature-wrapper");
+
+// Get the button that opens the modal
+var sig_trigger = document.getElementById("signature-trigger");
+
+// Get the <span> element that closes the modal
+var close_btn = document.getElementById("close");
+
+// When the user clicks the button, open the modal 
+sig_trigger.onclick = function() {
+    sig.style.visibility = "visible";
+    page.style.display = "none";
+}
+
+// When the user clicks on <span> (x), close the modal
+close_btn.onclick = function() {
+    sig.style.visibility = "hidden";
+    page.style.display = "block";
+}
+
+
+var canvas = document.getElementById('signature-pad');
+
+// Adjust canvas coordinate space taking into account pixel ratio,
+// to make it look crisp on mobile devices.
+// This also causes canvas to be cleared.
+function resizeCanvas() {
+    // When zoomed out to less than 100%, for some very strange reason,
+    // some browsers report devicePixelRatio as less than 1
+    // and only part of the canvas is cleared then.
+    var ratio =  Math.max(window.devicePixelRatio || 1, 1);
+    canvas.width = canvas.offsetWidth * ratio;
+    canvas.height = canvas.offsetHeight * ratio;
+    canvas.getContext("2d").scale(ratio, ratio);
+}
+
+window.onresize = resizeCanvas;
+resizeCanvas();
+
+var signaturePad = new SignaturePad(canvas, {
+  backgroundColor: 'rgb(255, 255, 255)' // necessary for saving image as JPEG; can be removed is only saving as PNG or SVG
+});
+
+document.getElementById('save-png').addEventListener('click', function () {
+  if (signaturePad.isEmpty()) {
+    return alert("Please provide a signature first.");
+  }
+  var data = signaturePad.toDataURL('image/png');
+  console.log(data);
+});
+
+document.getElementById('clear').addEventListener('click', function () {
+  signaturePad.clear();
+});
+
+document.getElementById('undo').addEventListener('click', function () {
+	var data = signaturePad.toData();
+  if (data) {
+    data.pop(); // remove the last dot or line
+    signaturePad.fromData(data);
+  }
+});
+  </script>
+{% endblock %}
